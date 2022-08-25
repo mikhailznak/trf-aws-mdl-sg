@@ -23,6 +23,9 @@ resource "aws_security_group" "this" {
     },
     var.tags
   )
+  lifecycle {
+    ignore_changes = [name]
+  }
 }
 
 
